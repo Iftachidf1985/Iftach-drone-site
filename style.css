@@ -1,35 +1,71 @@
 body {
-  direction: rtl;
-  font-family: 'Orbitron', sans-serif;
-  background-color: #0a0a0a;
-  color: #ffffff;
   margin: 0;
-  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  background-color: #000;
+}
+
+.video-background {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 header {
-  background-color: #111;
-  padding: 20px;
   text-align: center;
+  padding: 60px 20px 20px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
 }
 
 nav a {
-  color: #00ffff;
   margin: 0 15px;
+  color: #00ffff;
   text-decoration: none;
   font-weight: bold;
 }
 
 section {
-  padding: 40px;
-  text-align: center;
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.7);
+  margin: 20px;
+  border-radius: 10px;
 }
 
-.cta {
+.service-box {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #111;
+  border: 1px solid #00ffff;
+  border-radius: 8px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+form button {
   background-color: #00ffff;
   color: #000;
   padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
+  border: none;
   font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
 }
