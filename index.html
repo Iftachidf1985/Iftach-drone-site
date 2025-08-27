@@ -9,21 +9,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Fixed Navigation -->
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+        <p>טוען...</p>
+    </div>
+
+    <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
+            <div class="logo">
                 <i class="fas fa-helicopter"></i>
-                <span>SkyTech</span>
+                SkyTech
             </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">בית</a>
-                <a href="#services" class="nav-link">שירותים</a>
-                <a href="#about" class="nav-link">אודות</a>
-                <a href="#portfolio" class="nav-link">גלריה</a>
-                <a href="#contact" class="nav-link">צור קשר</a>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home">בית</a></li>
+                <li><a href="#services">שירותים</a></li>
+                <li><a href="#about">אודות</a></li>
+                <li><a href="#portfolio">גלריה</a></li>
+                <li><a href="#contact">צור קשר</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobile-menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -31,103 +37,95 @@
         </div>
     </nav>
 
-    <!-- Hero Section with Video Background -->
-    <section id="home" class="hero">
-        <div class="video-background">
-            <video autoplay muted loop>
-                <source src="https://player.vimeo.com/external/342571552.hd.mp4?s=45ee5c2c7b83e1f46b5c3e4e8b8c9d5c3e4e8b8c" type="video/mp4">
-                <!-- Fallback gradient background if video fails -->
-            </video>
-            <div class="video-overlay"></div>
-        </div>
-        
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <video class="hero-video" autoplay muted loop>
+            <source src="https://cdn.pixabay.com/vimeo/409141050/sky-30889.mp4?width=1280&hash=d0e5b6d2b1be4c8bf6b8e8b7b4d9c4e2e1f7a3d6" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">
-                    <span class="title-line animate-slide-up">טכנולוגיית</span>
-                    <span class="title-line animate-slide-up delay-1">הרחפנים</span>
-                    <span class="title-line animate-slide-up delay-2">המתקדמת</span>
-                </h1>
-                <p class="hero-subtitle animate-fade-in delay-3">
-                    פתרונות רחפנים מקצועיים לעסקים וארגונים • צילום אווירי • מיפוי • ביקורת ואבטחה
-                </p>
-                <div class="hero-buttons animate-fade-in delay-4">
-                    <a href="#services" class="btn btn-primary">
-                        <span>השירותים שלנו</span>
-                        <i class="fas fa-arrow-left"></i>
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <span>קבל הצעת מחיר</span>
-                        <i class="fas fa-phone"></i>
-                    </a>
-                </div>
+            <h1 class="hero-title">SkyTech Drones</h1>
+            <p class="hero-subtitle">פתרונות רחפנים מקצועיים | צילום אווירי מתקדם | טכנולוגיית העתיד</p>
+            <div class="hero-buttons">
+                <a href="#services" class="cta-button primary">
+                    <span>השירותים שלנו</span>
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <a href="#contact" class="cta-button secondary">
+                    <span>קבל הצעת מחיר</span>
+                    <i class="fas fa-phone"></i>
+                </a>
             </div>
         </div>
-        
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator animate-bounce delay-5">
+        <div class="scroll-indicator">
             <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
+    <section class="services" id="services">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">השירותים שלנו</h2>
-                <p class="section-subtitle">פתרונות רחפנים מתקדמים עבור כל צורך</p>
-            </div>
+            <h2 class="section-title">השירותים שלנו</h2>
+            <p class="section-subtitle">טכנולוגיית רחפנים מתקדמת לכל הצרכים שלך</p>
             
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-camera"></i>
-                    </div>
-                    <h3>צילום אווירי</h3>
-                    <p>צילום ווידאו ותמונות באיכות 4K מהאוויר עבור אירועים, נדל"ן ושיווק</p>
+                    <div class="service-icon">📸</div>
+                    <h3 class="service-title">צילום אווירי</h3>
+                    <p class="service-description">צילום ווידאו ותמונות באיכות 4K מהאוויר עבור אירועים, נדל"ן ושיווק מקצועי</p>
                     <div class="service-features">
-                        <span class="feature-tag">4K Ultra HD</span>
-                        <span class="feature-tag">גימבל מייצב</span>
-                        <span class="feature-tag">עריכה מקצועית</span>
+                        <span class="feature-badge">4K Ultra HD</span>
+                        <span class="feature-badge">גימבל מייצב</span>
                     </div>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-map"></i>
-                    </div>
-                    <h3>מיפוי ומדידות</h3>
-                    <p>מיפוי תלת-מימדי, אורתופוטו ומדידות מדויקות לפרויקטי הנדסה ובנייה</p>
+                    <div class="service-icon">🎬</div>
+                    <h3 class="service-title">צילום קולנועי</h3>
+                    <p class="service-description">יצירת סרטונים קולנועיים עוצרי נשימה עם צילום אווירי מקצועי לסרטים ופרסומות</p>
                     <div class="service-features">
-                        <span class="feature-tag">דיוק גבוה</span>
-                        <span class="feature-tag">מיפוי 3D</span>
-                        <span class="feature-tag">ענני נקודות</span>
+                        <span class="feature-badge">זוויות יצירתיות</span>
+                        <span class="feature-badge">עריכה מקצועית</span>
                     </div>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>ביקורת ואבטחה</h3>
-                    <p>בדיקות תשתיות, ניטור אבטחה ומעקב בזמן אמת באמצעות רחפנים</p>
+                    <div class="service-icon">🏗️</div>
+                    <h3 class="service-title">ניטור בנייה</h3>
+                    <p class="service-description">מעקב אחר התקדמות בנייה, ביקורות באתרים ובטיחות עם סקרים אוויריים קבועים</p>
                     <div class="service-features">
-                        <span class="feature-tag">זמן אמת</span>
-                        <span class="feature-tag">ראיית לילה</span>
-                        <span class="feature-tag">בטיחות מקסימלית</span>
+                        <span class="feature-badge">דיוק גבוה</span>
+                        <span class="feature-badge">דוחות מפורטים</span>
                     </div>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>הדרכה והכשרה</h3>
-                    <p>קורסי הטסת רחפנים, הכנה לרישיון מטיס והכשרת צוותים מקצועיים</p>
+                    <div class="service-icon">🌾</div>
+                    <h3 class="service-title">סקרים חקלאיים</h3>
+                    <p class="service-description">אופטימיזציה של ניהול יבולים עם מיפוי חקלאות מדויק וניטור בריאות יבולים</p>
                     <div class="service-features">
-                        <span class="feature-tag">רישיון מטיס</span>
-                        <span class="feature-tag">הכשרה מקצועית</span>
-                        <span class="feature-tag">מדריכים מוסמכים</span>
+                        <span class="feature-badge">ניתוח יבולים</span>
+                        <span class="feature-badge">חיסכון במשאבים</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3 class="service-title">נדל"ן</h3>
+                    <p class="service-description">הצגת נכסים עם צילומים אוויריים מרהיבים המדגישים תכונות וסביבה כמו שמעולם לא</p>
+                    <div class="service-features">
+                        <span class="feature-badge">שיווק מתקדם</span>
+                        <span class="feature-badge">תוצאות מהירות</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🚁</div>
+                    <h3 class="service-title">חיפוש והצלה</h3>
+                    <p class="service-description">תמיכה בשירותי חירום עם טכנולוגיית רחפנים לפריסה מהירה במבצעי חיפוש והצלה</p>
+                    <div class="service-features">
+                        <span class="feature-badge">זמן תגובה מהיר</span>
+                        <span class="feature-badge">ציוד מיוחד</span>
                     </div>
                 </div>
             </div>
@@ -135,15 +133,16 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section class="about" id="about">
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>מובילים בטכנולוגיית רחפנים</h2>
-                    <p class="about-description">
-                        אנחנו צוות מקצועי עם ניסיון של מעל 8 שנים בתחום הרחפנים. מספקים פתרונות מתקדמים לעסקים, ארגונים וגופים ממשלתיים בכל רחבי הארץ.
-                    </p>
-                    <div class="stats-grid">
+                    <h2>אודות SkyTech</h2>
+                    <p>עם מעל עשור של ניסיון בטכנולוגיה אווירית, SkyTech Drones נמצאת בחזית השירותים המקצועיים לרחפנים. אנו משלבים טכנולוגיה חדישה עם חזון אמנותי כדי לספק תוצאות יוצאות דופן.</p>
+                    <p>הצוות שלנו של טייסים מוסמכים ואנשי מקצוע יצירתיים מצוידים בטכנולוגיית הרחפנים העדכנית ביותר, מה שמבטיח שכל פרויקט עומד בסטנדרטים הגבוהים ביותר של איכות ובטיחות.</p>
+                    <p>מהפקות הוליווד ועד נדל"ן מקומי, עזרנו ללקוחות אינספור ללכוד את החזון שלהם מלמעלה.</p>
+                    
+                    <div class="stats-container">
                         <div class="stat-item">
                             <span class="stat-number">500+</span>
                             <span class="stat-label">פרויקטים הושלמו</span>
@@ -159,57 +158,40 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-drone"></i>
-                        <p>דמיית רחפן מקצועי</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="רחפן מקצועי בטיסה">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">הגלריה שלנו</h2>
-                <p class="section-subtitle">דוגמאות מהעבודות שלנו</p>
-            </div>
+            <h2 class="section-title">הגלריה שלנו</h2>
+            <p class="section-subtitle">דוגמאות מהעבודות המרשימות שלנו</p>
             
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <h4>צילום אווירי עירוני</h4>
-                            <p>פרויקט תיעוד בנייה</p>
-                        </div>
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="פרויקט 1">
+                    <div class="portfolio-overlay">
+                        <h4>צילום אווירי עירוני</h4>
+                        <p>פרויקט תיעוד מקיף לבנייה עירונית</p>
                     </div>
                 </div>
                 
                 <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-mountain"></i>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <h4>מיפוי תשתיות</h4>
-                            <p>סקר דרכים ותשתיות</p>
-                        </div>
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="פרויקט 2">
+                    <div class="portfolio-overlay">
+                        <h4>נופים טבעיים</h4>
+                        <p>צילום חקלאי ומיפוי שטחים</p>
                     </div>
                 </div>
                 
                 <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-industry"></i>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <h4>ביקורת תעשייתית</h4>
-                            <p>בדיקת מתקנים תעשייתיים</p>
-                        </div>
+                    <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="פרויקט 3">
+                    <div class="portfolio-overlay">
+                        <h4>תעשייה וטכנולוgia</h4>
+                        <p>ביקורת תשתיות ומתקנים</p>
                     </div>
                 </div>
             </div>
@@ -217,7 +199,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section class="contact" id="contact">
         <div class="container">
             <div class="contact-content">
                 <div class="contact-info">
@@ -226,17 +208,17 @@
                     
                     <div class="contact-details">
                         <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <strong>טלפון</strong>
-                                <span>050-123-4567</span>
-                            </div>
-                        </div>
-                        <div class="contact-item">
                             <i class="fas fa-envelope"></i>
                             <div>
                                 <strong>אימייל</strong>
                                 <span>info@skytech-drones.co.il</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>טלפון</strong>
+                                <span>050-123-4567</span>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -264,16 +246,17 @@
                             <select id="service" name="service" required>
                                 <option value="">בחר סוג שירות</option>
                                 <option value="aerial-photography">צילום אווירי</option>
-                                <option value="mapping">מיפוי ומדידות</option>
-                                <option value="inspection">ביקורת ואבטחה</option>
-                                <option value="training">הדרכה והכשרה</option>
-                                <option value="other">אחר</option>
+                                <option value="cinematography">צילום קולנועי</option>
+                                <option value="construction">ניטור בנייה</option>
+                                <option value="agriculture">סקרים חקלאיים</option>
+                                <option value="real-estate">נדל"ן</option>
+                                <option value="search-rescue">חיפוש והצלה</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <textarea id="message" name="message" placeholder="פרטי הפרויקט" rows="4" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="cta-button primary">
                             <span>שלח הודעה</span>
                             <i class="fas fa-paper-plane"></i>
                         </button>
@@ -288,51 +271,37 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <div class="footer-logo">
-                        <i class="fas fa-helicopter"></i>
-                        <span>SkyTech Drones</span>
-                    </div>
-                    <p>פתרונות רחפנים מתקדמים לעתיד הטכנולוגיה</p>
+                    <h3>צור קשר</h3>
+                    <p><i class="fas fa-envelope"></i> info@skytech-drones.co.il</p>
+                    <p><i class="fas fa-phone"></i> 050-123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> תל אביב, ישראל</p>
+                </div>
+                <div class="footer-section">
+                    <h3>שירותים</h3>
+                    <a href="#services">צילום אווירי</a>
+                    <a href="#services">צילום קולנועי</a>
+                    <a href="#services">ניטור בנייה</a>
+                    <a href="#services">נדל"ן</a>
+                </div>
+                <div class="footer-section">
+                    <h3>החברה</h3>
+                    <a href="#about">אודות</a>
+                    <a href="#portfolio">הגלריה שלנו</a>
+                    <a href="#contact">צור קשר</a>
+                    <a href="#">קריירה</a>
+                </div>
+                <div class="footer-section">
+                    <h3>עקוב אחרינו</h3>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>קישורים מהירים</h4>
-                    <ul>
-                        <li><a href="#services">השירותים שלנו</a></li>
-                        <li><a href="#about">אודות החברה</a></li>
-                        <li><a href="#portfolio">גלריית עבודות</a></li>
-                        <li><a href="#contact">צור קשר</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>שירותים</h4>
-                    <ul>
-                        <li><a href="#">צילום אווירי מקצועי</a></li>
-                        <li><a href="#">מיפוי ומדידות</a></li>
-                        <li><a href="#">בדיקות תשתיות</a></li>
-                        <li><a href="#">הכשרה והדרכה</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>צור קשר</h4>
-                    <div class="contact-info-footer">
-                        <p><i class="fas fa-phone"></i> 050-123-4567</p>
-                        <p><i class="fas fa-envelope"></i> info@skytech-drones.co.il</p>
-                        <p><i class="fas fa-map-marker-alt"></i> תל אביב, ישראל</p>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2025 SkyTech Drones. כל הזכויות שמורות.</p>
+                <p>&copy; 2025 SkyTech Drones. כל הזכויות שמורות. | מוסמך רת"ק | מבוטח במלואו</p>
             </div>
         </div>
     </footer>
